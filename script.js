@@ -265,7 +265,7 @@ const projectsData = {
             imagen: "imagenes/mo cuishle.png",
             url_sitio: "https://mocshle.gt.tc",
             titulo: "Mo Cuishle",
-            integrantes: "Liz Carolina"
+            integrantes: "Liz López"
         },
         {
             imagen: "imagenes/daylen cafeteria.png",
@@ -474,7 +474,7 @@ const projectsData = {
             imagen: "https://drive.google.com/file/d/1yov7hNjW2tEGSeZtyz4rkpTSBXHO794c/view?usp=drive_link", 
             url_sitio: "https://drive.google.com/file/d/1yov7hNjW2tEGSeZtyz4rkpTSBXHO794c/view?usp=drive_link",
             titulo: "Tujami",
-            integrantes: "Liz Carolina"
+            integrantes: "Liz López"
         },
         {
             categoria: "musica",
@@ -809,55 +809,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function filterProjects() {
         const query = searchInput.value.trim().toLowerCase();
-        const projectCards = gallery.querySelectorAll('.project-card');
-        let anyVisible = false;
+        const activeTab = document.querySelector('.tab-button.active');
+        const category = activeTab ? activeTab.dataset.category : (tabButtons[0] && tabButtons[0].dataset.category);
 
-        // Ocultar/mostrar la tarjeta completa (si está envuelta en <a> se esconderá el <a>,
-        // si no, se esconderá el propio .project-card). También deshabilitamos eventos de puntero
-        // y añadimos aria-hidden para accesibilidad.
-        projectCards.forEach(card => {
-            const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
-            const desc = card.querySelector('p')?.textContent?.toLowerCase() || '';
-            const visible = title.includes(query) || desc.includes(query);
+        // Si no hay categoría activa, salir
+        if (!category) return;
 
-            // Buscar si existe un wrapper clicable (en nuestra plantilla es <a class="project-card-link">)
-            const wrapper = card.closest('.project-card-link') || card;
+        // Si la query está vacía, restauramos la vista completa de la categoría
+        if (!query) {
+            displayProjects(category);
+            return;
+        }
 
-            if (visible) {
-                wrapper.style.display = '';
-                wrapper.removeAttribute('aria-hidden');
-                wrapper.style.pointerEvents = '';
-                anyVisible = true;
+        const projects = projectsData[category] || [];
+
+        const matches = (p) => {
+            const title = (p.titulo || '').toString().toLowerCase();
+            const integrantes = (p.integrantes || '').toString().toLowerCase();
+            return title.includes(query) || integrantes.includes(query);
+        };
+
+        // Manejo especial para "Videos con IA" (mantener la agrupación)
+        if (category === 'Videos con IA') {
+            const historiaAll = projects.filter(p => (p.categoria || '').toString().toLowerCase() === 'historia');
+            const musicaAll = projects.filter(p => (p.categoria || '').toString().toLowerCase() === 'musica');
+
+            const historia = historiaAll.filter(matches);
+            const musica = musicaAll.filter(matches);
+
+            const makeSection = (title, items) => {
+                if (!items || items.length === 0) return '';
+                const cards = items.map(createProjectCard).join('');
+                return `\n                <section class="ia-section">\n                    <div class="ia-category-header">\n                        <h2 class="ia-title">${title}</h2>\n                        <div class="ia-divider" aria-hidden="true"></div>\n                    </div>\n                    <div class="gallery-grid">\n                        ${cards}\n                    </div>\n                </section>\n            `;
+            };
+
+            const parts = [];
+            if (historia.length) parts.push(makeSection('Historia del Paraguay', historia));
+            if (musica.length) parts.push(makeSection('Música Paraguaya', musica));
+
+            if (parts.length === 0) {
+                gallery.innerHTML = '';
+                const msg = document.createElement('p');
+                msg.id = 'no-results-message';
+                msg.textContent = 'No se encontraron proyectos.';
+                msg.style.textAlign = 'center';
+                msg.style.color = '#888';
+                gallery.appendChild(msg);
             } else {
-                wrapper.style.display = 'none';
-                wrapper.setAttribute('aria-hidden', 'true');
-                wrapper.style.pointerEvents = 'none';
+                gallery.innerHTML = `\n                <div class="ia-sections-container">\n                    ${parts.join('<div class="ia-small-sep"></div>')}\n                </div>`;
             }
-        });
 
-        // Para la sección "Videos con IA" (y otras secciones con encabezados), ocultar
-        // la sección si todos sus .project-card internos están ocultos. Esto evita que
-        // queden espacios en blanco por títulos o contenedores vacíos.
-        const iaSections = gallery.querySelectorAll('.ia-section');
-        iaSections.forEach(section => {
-            const grid = section.querySelector('.gallery-grid');
-            if (!grid) return;
-            // Determinar si existe alguna tarjeta visible dentro del grid
-            const anyInGridVisible = Array.from(grid.children).some(child => {
-                // child puede ser <a.project-card-link> o .project-card
-                if (child.matches && (child.matches('.project-card') || child.matches('.project-card-link'))) {
-                    return child.style.display !== 'none';
-                }
-                return false;
-            });
+            return;
+        }
 
-            section.style.display = anyInGridVisible ? '' : 'none';
-        });
+        // Para las demás categorías filtramos y renderizamos desde los datos
+        const filtered = projects.filter(matches);
 
-        // Si no hay resultados en toda la galería, reemplazamos el contenido por un mensaje claro.
-        let noResults = document.getElementById('no-results-message');
-        if (!anyVisible) {
-            // Vaciar la galería y mostrar único mensaje para evitar restos de secciones/encabezados.
+        if (filtered.length === 0) {
+            // Mostrar mensaje de no resultados
             gallery.innerHTML = '';
             const msg = document.createElement('p');
             msg.id = 'no-results-message';
@@ -865,8 +874,39 @@ document.addEventListener('DOMContentLoaded', () => {
             msg.style.textAlign = 'center';
             msg.style.color = '#888';
             gallery.appendChild(msg);
-        } else if (noResults) {
-            noResults.remove();
+            return;
+        }
+
+        // Construir tarjetas filtradas
+        const cards = filtered.map(createProjectCard).join('');
+
+        // Si estamos en E-commerces, asegurarnos de que el recuadro admin exista POR ENCIMA
+        if (category === 'E-commerces') {
+            const existingBox = document.querySelector('.admin-info-box');
+            if (!existingBox) {
+                const adminInfoBoxHtml = `
+                    <div class="admin-info-box" role="note" aria-label="Información de acceso admin">
+                        <div class="admin-info-inner">
+                            <h3 class="admin-info-title">Acceso administrador</h3>
+                            <p class="admin-info-text">Para acceder como admin usar los siguientes datos:</p>
+                            <ul class="admin-cred-list">
+                                <li><strong>Correo:</strong> admin@gmail.com</li>
+                                <li><strong>Contraseña:</strong> admin1234</li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = adminInfoBoxHtml.trim();
+                const adminElement = wrapper.firstElementChild;
+                if (gallery.parentNode && adminElement) gallery.parentNode.insertBefore(adminElement, gallery);
+            }
+            gallery.innerHTML = `<div class="gallery-grid">${cards}</div>`;
+        } else {
+            // Asegurar limpieza del recuadro admin si existiera
+            const existingBox = document.querySelector('.admin-info-box');
+            if (existingBox) existingBox.remove();
+            gallery.innerHTML = `<div class="gallery-grid">${cards}</div>`;
         }
     }
 
