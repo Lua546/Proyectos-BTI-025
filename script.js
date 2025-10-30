@@ -14,6 +14,7 @@ const projectsData = {
         },
         {
             imagen: "https://drive.google.com/file/d/1ws3jE_IYdKYqV_XiCx7RDx2Ng_p8f1Dn/view?usp=sharing", 
+            url_sitio: "https://guardianesdelbosque00.itch.io/guardianes-del-bosque",
             titulo: "Guardian of the forest", 
             integrantes: "Luana Martínez y Liz López"
         },
@@ -36,7 +37,7 @@ const projectsData = {
         },
         {
             url_sitio: "https://mariajosegomezespinoza44-max.github.io/mercaexpres/",
-            imagen: "imagenes/mercado express.jpg", 
+            imagen: "https://drive.google.com/file/d/1CQqgoKQoY4qlqSg5cImQZeBgvO4cqLjw/view?usp=drive_link", 
             titulo: "Mercado Express", 
             integrantes: "María Gómez, Ivan Alderete y Nayeli Silvero"
         },
@@ -46,7 +47,7 @@ const projectsData = {
             integrantes: "Sharise Cabañas, Tatiana Ocampos y Fernando Bogado"
         },
         {
-            imagen: "", 
+            imagen: "https://www.youtube.com/watch?v=iepKq4RnzVg", 
             titulo: "Camino a la Albirroja", 
             integrantes: "Julio Gómez, Lucas Portillo y Ayelen Vera"
         },
@@ -281,10 +282,31 @@ const projectsData = {
     "Videos con IA": [
         {
             categoria: "historia",
+            imagen: "https://www.youtube.com/watch?v=Zp4Qo1kcbIA",
+            url_sitio: "https://www.youtube.com/watch?v=Zp4Qo1kcbIA",
+            titulo: "Reducciones jesuíticas del Paraguay",
+            integrantes: "Lucas Brítez y Julio Gómez"
+        },
+        {
+            categoria: "historia",
             imagen: "https://drive.google.com/file/d/1hDgfSv2-XT_oWY5mAVcgIbpYvyI5U8Oa/view?usp=sharing",
             url_sitio: "https://drive.google.com/file/d/1hDgfSv2-XT_oWY5mAVcgIbpYvyI5U8Oa/view?usp=sharing",
             titulo: "Fábrica de Hierro de Ybycuí \"La Rosada\"",
             integrantes: "Sharise Cabañas"
+        },
+        {
+            categoria: "historia",
+            imagen: "https://drive.google.com/file/d/1LB5BtPt6P4TGtihERVNO6lhs_VyyqY6a/view?usp=drive_link",
+            url_sitio: "https://drive.google.com/file/d/1LB5BtPt6P4TGtihERVNO6lhs_VyyqY6a/view?usp=drive_link",
+            titulo: "Rol de la Mujer Paraguaya en la Guerra Guazú",
+            integrantes: "Ivan Alderete"
+        },
+        {
+            categoria: "historia",
+            imagen: "https://www.youtube.com/watch?v=aisOh7xfqTM",
+            url_sitio: "https://www.youtube.com/watch?v=aisOh7xfqTM",
+            titulo: "Batalla de Cerro Corá",
+            integrantes: "Julio Gómez"
         },
         {
             categoria: "historia",
@@ -398,24 +420,6 @@ const projectsData = {
             titulo: "Represa de Yasyretá",
             integrantes: "Isana Gómez"
         },
-        // {
-        //     categoria: "historia",
-        //     imagen: "", 
-        //     titulo: "La dictadura de Alfredo Stroessner",
-        //     integrantes: "Charlies Vera"
-        // },
-        // {
-        //     categoria: "historia",
-        //     imagen: "", 
-        //     titulo: "Guerra Guazu desde el punto de vista de las mujeres",
-        //     integrantes: "Ivan Alderete"
-        // },
-        // {
-        //     categoria: "historia",
-        //     imagen: "", 
-        //     titulo: "Parque Nacional Cerro Corá",
-        //     integrantes: "Alexia Rodas"
-        // },
         {
             categoria: "historia",
             imagen: "https://www.tiktok.com/@pasadovivo_py/video/7503371496618872069", 
@@ -431,6 +435,20 @@ const projectsData = {
             integrantes: "Denis Casco"
         },
         {
+            categoria: "historia",
+            imagen: "https://drive.google.com/file/d/1wTtCm-okR74rJP9XCk2TUq7O9ABLiC_w/view?usp=drive_link",
+            url_sitio: "https://drive.google.com/file/d/1wTtCm-okR74rJP9XCk2TUq7O9ABLiC_w/view?usp=drive_link",
+            titulo: "Basílica de Caacupé",
+            integrantes: "Alexia Rodas"
+        },
+        {
+            categoria: "historia",
+            imagen: "https://drive.google.com/file/d/1EuNCbkGoz4UM_7DNQYNDtTPw4_0PL_Fj/view?usp=sharing",
+            url_sitio: "https://drive.google.com/file/d/1EuNCbkGoz4UM_7DNQYNDtTPw4_0PL_Fj/view?usp=sharing",
+            titulo: "Dictadura de Alfredo Stroessner",
+            integrantes: "Charlies Vera"
+        },
+        {
             categoria: "musica",
             imagen: "https://www.tiktok.com/@pasadovivo_py/video/7508915611347488005", 
             url_sitio: "https://www.tiktok.com/@pasadovivo_py/video/7508915611347488005",
@@ -439,10 +457,24 @@ const projectsData = {
         },
         {
             categoria: "musica",
-            imagen: "https://www.tiktok.com/@pasadovivo_py/video/7508180937524514054", 
-            url_sitio: "https://www.tiktok.com/@pasadovivo_py/video/7508180937524514054",
+            imagen: "https://drive.google.com/file/d/107ULMHcejIylr1rpjy65thkwVuhi1hqB/view?usp=sharing", 
+            url_sitio: "https://drive.google.com/file/d/107ULMHcejIylr1rpjy65thkwVuhi1hqB/view?usp=sharing",
+            titulo: "A mi Tierra",
+            integrantes: "Nayeli Silvero"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1yov7hNjW2tEGSeZtyz4rkpTSBXHO794c/view?usp=drive_link", 
+            url_sitio: "https://drive.google.com/file/d/1yov7hNjW2tEGSeZtyz4rkpTSBXHO794c/view?usp=drive_link",
+            titulo: "Tujami",
+            integrantes: "Liz Carolina"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://vm.tiktok.com/ZMAsFYgCg/", 
+            url_sitio: "https://vm.tiktok.com/ZMAsFYgCg/",
             titulo: "13 Tuyutí",
-            integrantes: "Lucas Giménez"
+            integrantes: "Lucas Brítez"
         },
         {
             categoria: "musica",
@@ -492,6 +524,55 @@ const projectsData = {
             url_sitio: "https://www.youtube.com/watch?v=umoxoEItcMc",
             titulo: "Mis noches sin ti",
             integrantes: "Yanina Miranda"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://www.youtube.com/watch?v=HMJelY6slYo", 
+            url_sitio: "https://www.youtube.com/watch?v=HMJelY6slYo",
+            titulo: "Recuerdos de Ypacaraí",
+            integrantes: "Isana Gómez"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1UkBNFhvr7bQ0xjCdYiWPiuVCECcNV6Mh/view?usp=drive_link", 
+            url_sitio: "https://drive.google.com/file/d/1UkBNFhvr7bQ0xjCdYiWPiuVCECcNV6Mh/view?usp=drive_link",
+            titulo: "Guavira Poty",
+            integrantes: "Charlies Vera"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1PTJ-bFV8CeQYPXXlh8D_8_xDJXS4EwFb/view?usp=drive_link", 
+            url_sitio: "https://drive.google.com/file/d/1PTJ-bFV8CeQYPXXlh8D_8_xDJXS4EwFb/view?usp=drive_link",
+            titulo: "A mi tierra",
+            integrantes: "Ivan Alderete"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1YEG7561Oj_6Cgsz82F9bF-BpvAJtasZj/view?usp=drive_link", 
+            url_sitio: "https://drive.google.com/file/d/1YEG7561Oj_6Cgsz82F9bF-BpvAJtasZj/view?usp=drive_link",
+            titulo: "Mamama",
+            integrantes: "Alexia Rodas"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://www.tiktok.com/@pasadovivo_py/video/7510033254464965894?_r=1&_t=ZM-90zFMzMHdTo", 
+            url_sitio: "https://www.tiktok.com/@pasadovivo_py/video/7510033254464965894?_r=1&_t=ZM-90zFMzMHdTo",
+            titulo: "Rohecha che morena",
+            integrantes: "María José Gómez"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1ykuZasdVKK11O6gGjM9yoSldMNL9RnVT/view?usp=drivesdk", 
+            url_sitio: "https://drive.google.com/file/d/1ykuZasdVKK11O6gGjM9yoSldMNL9RnVT/view?usp=drivesdk",
+            titulo: "Mokoi Guyrai",
+            integrantes: "Lucas Giménez"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1RZWFZQ_0WrxwpX0fiiV9NmOa5yO5DEYR/view?usp=sharing", 
+            url_sitio: "https://drive.google.com/file/d/1RZWFZQ_0WrxwpX0fiiV9NmOa5yO5DEYR/view?usp=sharing",
+            titulo: "Anahí",
+            integrantes: "Sharise Cabaña"
         }
     ]
 };
