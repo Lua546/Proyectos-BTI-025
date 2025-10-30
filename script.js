@@ -109,7 +109,7 @@ const projectsData = {
             integrantes: "Julio Gómez, Lucas Portillo y Lucas Brítez" 
         },
         {
-            imagen: "imagenes/Safe.jpg", 
+            imagen: "imagenes/safe.jpg", 
             titulo: "Safe Kitchen",
             integrantes: "Mathias Quintana y Lucas Giménez" 
         },
