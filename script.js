@@ -754,7 +754,42 @@ function displayProjects(category) {
     }
 
     const cardsHTML = projects.map(createProjectCard).join('');
-    gallery.innerHTML = cardsHTML;
+
+    // Si la categoría es E-commerces, mostramos primero un recuadro informativo
+    if (category === "E-commerces") {
+        const adminInfoBoxHtml = `
+            <div class="admin-info-box" role="note" aria-label="Información de acceso admin">
+                <div class="admin-info-inner">
+                    <h3 class="admin-info-title">Acceso administrador</h3>
+                    <p class="admin-info-text">Para acceder como admin usar los siguientes datos:</p>
+                    <ul class="admin-cred-list">
+                        <li><strong>Correo:</strong> admin@gmail.com</li>
+                        <li><strong>Contraseña:</strong> admin1234</li>
+                    </ul>
+                </div>
+            </div>
+        `;
+
+        // Eliminar cualquier recuadro existente para evitar duplicados
+        const existingBox = document.querySelector('.admin-info-box');
+        if (existingBox) existingBox.remove();
+
+        // Crear el elemento y colocarlo ANTES de la galería (como hermano) para que quede por encima
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = adminInfoBoxHtml.trim();
+        const adminElement = wrapper.firstElementChild;
+        if (gallery.parentNode && adminElement) {
+            gallery.parentNode.insertBefore(adminElement, gallery);
+        }
+
+        // Rellenar solo la galería con las tarjetas (sin incluir el recuadro dentro)
+        gallery.innerHTML = `<div class="gallery-grid">${cardsHTML}</div>`;
+    } else {
+        // Al cambiar de categoría, eliminar el recuadro si existe
+        const existingBox = document.querySelector('.admin-info-box');
+        if (existingBox) existingBox.remove();
+        gallery.innerHTML = cardsHTML;
+    }
 }
 
 
