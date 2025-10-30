@@ -61,7 +61,7 @@ const projectsData = {
     "Arduinos": [
         {
             url_sitio: "https://majitogmzz.github.io/",
-            imagen: "https://www.youtube.com/watch?v=OdU7avk5CQM",
+            imagen: "https://drive.google.com/file/d/1nUvs32EZTwFYqQlvRyXevzs3PVES2Hmo/view?usp=drive_link",
             titulo: "Ardutag",
             integrantes: "María José Gómez y Nayeli Silvero"
         },
@@ -85,7 +85,7 @@ const projectsData = {
         },
         {
             url_sitio: "https://mach1nemags-lang.github.io/BINOVA/",
-            imagen: "", 
+            imagen: "https://drive.google.com/file/d/11Gnkd2rICqbUZOoE-wbPxJsAoox8tUPj/view?usp=drive_link", 
             titulo: "Binova",
             integrantes: "Magalí Ramirez, Yanina Miranda y Tatiana Ocampos" 
         },
