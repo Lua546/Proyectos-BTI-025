@@ -576,6 +576,13 @@ const projectsData = {
         },
         {
             categoria: "musica",
+            imagen: "https://www.tiktok.com/@pasadovivo_py/video/7510705855252204805?_r=1&_t=ZM-90zOa0F3SmZ", 
+            url_sitio: "https://www.tiktok.com/@pasadovivo_py/video/7510705855252204805?_r=1&_t=ZM-90zOa0F3SmZ",
+            titulo: "Nde rendape aju",
+            integrantes: "Ayelen Vera"
+        },
+        {
+            categoria: "musica",
             imagen: "https://drive.google.com/file/d/1RZWFZQ_0WrxwpX0fiiV9NmOa5yO5DEYR/view?usp=sharing", 
             url_sitio: "https://drive.google.com/file/d/1RZWFZQ_0WrxwpX0fiiV9NmOa5yO5DEYR/view?usp=sharing",
             titulo: "Anahí",
