@@ -1,0 +1,362 @@
+/* --- Search Bar Styles (MODERNIZADO) --- */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0 2rem 0; /* Más espacio vertical */
+    gap: 0.75rem; /* Espacio aumentado */
+}
+
+#search-input {
+    padding: 0.8rem 1.5rem; /* Relleno aumentado */
+    border: 1px solid var(--card-bg); /* Borde sutil */
+    border-radius: 50px; /* Borde de píldora */
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    outline: none;
+    background: var(--card-bg); /* Fondo oscuro */
+    color: var(--text-color); /* Texto claro */
+    transition: all var(--transition-speed);
+    min-width: 250px; 
+    box-shadow: var(--shadow-soft); /* Sombra consistente */
+}
+
+#search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder más claro */
+}
+
+#search-input:focus {
+    border-color: var(--accent-color); /* Borde de acento */
+    box-shadow: 0 0 0 3px rgba(161, 110, 255, 0.4); /* Efecto de brillo en el foco */
+    background-color: #383857; /* Ligero cambio de color al enfocar */
+}
+
+#search-btn {
+    background: var(--accent-color); /* Morado pastel */
+    border: none;
+    border-radius: 50%;
+    padding: 0.7rem; /* Botón ligeramente más grande */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-speed), transform 0.2s;
+    box-shadow: var(--shadow-soft);
+}
+
+#search-btn:hover, #search-btn:focus {
+    background: var(--light-accent); /* Acento más claro en hover */
+    transform: scale(1.05); /* Efecto sutil de crecimiento */
+}
+
+#search-btn svg {
+    display: block;
+    stroke: var(--text-color); /* Ícono blanco */
+    width: 22px; /* Ícono más grande */
+    height: 22px;
+}
+/* Variables CSS para fácil actualización de colores */
+:root {
+    --bg-color: #1a1a2e;        /* Fondo principal (Oscuro) */
+    --text-color: #ffffff;      /* Color de texto principal */
+    --card-bg: #2c2c44;         /* Fondo de tarjetas/detalles */
+    --accent-color: #A16EFF;    /* Morado Pastel */
+    --light-accent: #b891ff;    /* Acento más claro para hover */
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra suave */
+    --radius-md: 8px;           /* Bordes redondeados */
+    --transition-speed: 0.3s;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* Base y Tipografía */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 80px; /* Espacio para el header fijo */
+}
+
+/* Header Fijo */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: var(--shadow-soft);
+    z-index: 1000;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left {
+    justify-self: start;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-left img#site-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+}
+
+.header-left .school {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.header-center {
+    justify-content: center;
+    text-align: center;
+}
+
+.header-center h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+}
+
+.header-right {
+    justify-self: end;
+    justify-content: flex-end;
+    color: rgba(255,255,255,0.95);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .fixed-header {
+        grid-template-columns: auto 1fr auto;
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    .header-center h1 {
+        font-size: 1.1rem;
+    }
+
+    /* Hide the long right text on very small screens to save space */
+    .header-right {
+        display: none;
+    }
+}
+
+/* Contenedor Principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Pestañas (Tabs) */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Para responsive */
+}
+
+.tab-button {
+    background-color: transparent;
+    border: 2px solid var(--card-bg);
+    color: var(--text-color);
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px; /* Botones tipo píldora */
+    transition: background-color var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
+}
+
+.tab-button:hover {
+    background-color: var(--card-bg);
+    border-color: var(--light-accent);
+}
+
+.tab-button.active {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(161, 110, 255, 0.5); /* Sombra suave de acento */
+}
+
+/* Galería y Tarjetas */
+.gallery-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    cursor: pointer;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Animación sutil */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 15px var(--light-accent);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* Altura fija para miniaturas e IFRAMES */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.project-card .video-embed {
+    /* Asegurar que el iframe ocupe el mismo espacio que la imagen */
+    width: 100%;
+    height: 200px;
+    background-color: black; /* Fondo negro para iframes */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card-content p strong {
+    font-weight: 400;
+    color: var(--light-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .fixed-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tabs-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        white-space: nowrap;
+    }
+
+    .tab-button {
+        flex-shrink: 0;
+        margin: 5px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+}
+
+/* Contenedor para Imagen/Video y Enlace */
+.media-container {
+    position: relative; /* Clave para posicionar el enlace */
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* Estilo para el efecto hover sutil */
+.project-card:hover .project-media {
+    transform: scale(1.05);
+}
+
+/* ÍCONO DE ENLACE ESTÉTICO (Para e-commerces/URL_Sitio) */
+.project-link-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 8px 10px;
+    border-radius: 50%; /* Icono redondo */
+    font-size: 1.2rem;
+    line-height: 1;
+    z-index: 10;
+    opacity: 0; /* Oculto por defecto */
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover .project-link-icon {
+    opacity: 1; /* Aparece en hover */
+    transform: scale(1);
+}
+
+/* --- Estilos para la sección 'Videos con IA' por categoría --- */
+.ia-section {
+    margin: 18px 0 28px 0;
+}
+
+/* Contenedor que fuerza el apilamiento vertical de secciones IA */
+.ia-sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.ia-category-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.ia-title {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin: 0;
+}
+
+.ia-divider {
+    flex: 1;
+    height: 8px;
+    background: linear-gradient(90deg, rgba(161,110,255,0.35), rgba(184,145,255,0.15));
+    border-radius: 999px;
+    box-shadow: 0 2px 10px rgba(161,110,255,0.08) inset;
+}
+
+/* Variante pequeña para separar secciones cuando ambas existen */
+.ia-small-sep {
+    height: 18px;
+}

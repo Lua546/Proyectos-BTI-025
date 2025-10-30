@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/svg" href="code-solid-full.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos BTI 025</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="fixed-header">
+        <div class="header-left">
+            <img src="imagenes/logo.png" alt="Logo" id="site-logo" />
+            <span class="school">C.R.E.C.E.</span>
+        </div>
+
+        <div class="header-center">
+            <h1>Proyectos 025</h1>
+        </div>
+
+        <div class="header-right">
+            Bachillerato Técnico en Informatica
+        </div>
+    </header>
+
+    <main>
+        <nav class="tabs-container">
+            <button class="tab-button active" data-category="Videos con IA">Videos con IA</button>
+            <button class="tab-button" data-category="Videojuegos">Videojuegos</button>
+            <button class="tab-button" data-category="E-commerces">E-commerces</button>
+            <button class="tab-button" data-category="Arduinos">Arduinos</button>
+        </nav>
+
+        <div class="search-bar-container">
+            <input type="text" id="search-input" placeholder="Buscar proyectos..." autocomplete="off" />
+            <button id="search-btn" aria-label="Buscar proyecto">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="9" cy="9" r="7" stroke="#333" stroke-width="2"/>
+                    <line x1="14.2929" y1="14.7071" x2="18" y2="18.4142" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <section id="projects-gallery" class="gallery-grid">
+            <p id="loading-message">Cargando proyectos...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
