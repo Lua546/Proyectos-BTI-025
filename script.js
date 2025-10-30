@@ -42,7 +42,8 @@ const projectsData = {
             integrantes: "María Gómez, Ivan Alderete y Nayeli Silvero"
         },
         {
-            imagen: "", 
+            imagen: "https://youtu.be/RPLptCkUzhA",
+            url_sitio: "https://f23a9.magicloops.app/", 
             titulo: "The hollow of the realms", 
             integrantes: "Sharise Cabañas, Tatiana Ocampos y Fernando Bogado"
         },
@@ -90,7 +91,7 @@ const projectsData = {
         },
         {
             url_sitio:"https://p2iet.magicloops.app/",
-            imagen: "", 
+            imagen: "imagenes/codelock.jpg", 
             titulo: "Codelock",
             integrantes: "Sharise Cabaña, Ivan Alderete y Fernando Bogado" 
         },
@@ -189,10 +190,16 @@ const projectsData = {
             integrantes: "Charlies Vera"
         },
         {
-            imagen: "",
-            url_sitio: "https://artevisual.yzz.me/index.php",
+            imagen: "imagenes/Arte Visual.png",
+            url_sitio: "https://artevisual.xo.je/index.php",
             titulo: "Arte Visual",
             integrantes: "Yadira Rivas"
+        },
+        {
+            imagen: "",
+            url_sitio: "",
+            titulo: "System Production",
+            integrantes: "Julio Gómez"
         },
         {
             imagen: "imagenes/Cioccomanía.png",
@@ -471,8 +478,8 @@ const projectsData = {
         },
         {
             categoria: "musica",
-            imagen: "https://vm.tiktok.com/ZMAsFYgCg/", 
-            url_sitio: "https://vm.tiktok.com/ZMAsFYgCg/",
+            imagen: "https://www.tiktok.com/@pasadovivo_py/video/7508180937524514054?_r=1&_t=ZM-90zETroAY9I", 
+            url_sitio: "https://www.tiktok.com/@pasadovivo_py/video/7508180937524514054?_r=1&_t=ZM-90zETroAY9I",
             titulo: "13 Tuyutí",
             integrantes: "Lucas Brítez"
         },
