@@ -8,6 +8,7 @@ const projectsData = {
             integrantes: "Lucas Brítez, Luana Rolón y Axel Rolón"
         },
         {
+            url_sitio:"https://memorias-de-mi-taita.itch.io/juego",
             imagen: "https://drive.google.com/file/d/1SAvqm3Ugw0yfHpJp5NIUpZ2eap6ityDC/view?usp=drive_link", 
             titulo: "Memorias de mi Taita",
             integrantes: "Mauricio Galeano, Alejandro Chamorro y Yanina Miranda"
@@ -113,6 +114,7 @@ const projectsData = {
             integrantes: "Julio Gómez, Lucas Portillo y Lucas Brítez" 
         },
         {
+            url_sitio:"https://lucasgimenez23.github.io/Safe-kitchen_/",
             imagen: "imagenes/safe.jpg", 
             titulo: "Safe Kitchen",
             integrantes: "Mathias Quintana y Lucas Giménez" 
