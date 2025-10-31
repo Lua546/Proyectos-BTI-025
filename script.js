@@ -53,6 +53,12 @@ const projectsData = {
             integrantes: "Julio Gómez, Lucas Portillo y Ayelen Vera"
         },
         {
+            imagen: "https://www.youtube.com/watch?v=ahdW2l4gZ3w",
+            url_sitio: "https://jojofaninsano1987.itch.io/desvelo",
+            titulo: "La búsqueda de Mishi",
+            integrantes: "Yadira Rivas, Aquiles Bobadilla y Karina Benítez"
+        },
+        {
             imagen: "", 
             titulo: "Solo en Casa", 
             integrantes: "Alexia Rodas, Fabio López y Denis Casco"
@@ -73,7 +79,7 @@ const projectsData = {
         },
         {
             url_sitio: "https://tjs3b.magicloops.app/",
-            imagen: "https://www.youtube.com/watch?v=tzmoA2ce8uI",
+            imagen: "https://www.youtube.com/watch?v=CxI-6xuIUSQ",
             titulo: "Arduweather",
             integrantes: "Codelock" 
         },
@@ -450,6 +456,13 @@ const projectsData = {
         },
         {
             categoria: "historia",
+            imagen: "https://www.youtube.com/watch?v=2m-xKedAYAk",
+            url_sitio: "https://www.youtube.com/watch?v=2m-xKedAYAk",
+            titulo: "Independencia del Paraguay",
+            integrantes: "Mathias Quintana"
+        },
+        {
+            categoria: "historia",
             imagen: "https://drive.google.com/file/d/1EuNCbkGoz4UM_7DNQYNDtTPw4_0PL_Fj/view?usp=sharing",
             url_sitio: "https://drive.google.com/file/d/1EuNCbkGoz4UM_7DNQYNDtTPw4_0PL_Fj/view?usp=sharing",
             titulo: "Dictadura de Alfredo Stroessner",
@@ -503,6 +516,13 @@ const projectsData = {
             url_sitio: "https://www.youtube.com/watch?v=NEYgSNWAR84",
             titulo: "India",
             integrantes: "Fabio López"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1JW6Yxck-1SKFo6F3UNsr20oi0i-NHc36/view?usp=sharing", 
+            url_sitio: "https://drive.google.com/file/d/1JW6Yxck-1SKFo6F3UNsr20oi0i-NHc36/view?usp=sharing",
+            titulo: "Ñemity",
+            integrantes: "Yadira Rivas"
         },
         {
             categoria: "musica",
@@ -580,6 +600,34 @@ const projectsData = {
             url_sitio: "https://www.tiktok.com/@pasadovivo_py/video/7510705855252204805?_r=1&_t=ZM-90zOa0F3SmZ",
             titulo: "Nde rendape aju",
             integrantes: "Ayelen Vera"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://www.youtube.com/watch?v=8M8dTwe_YiM", 
+            url_sitio: "https://www.youtube.com/watch?v=8M8dTwe_YiM",
+            titulo: "Himno Nacional Paraguayo",
+            integrantes: "Lucas Portillo"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/14MYppGS2IsGoseOChkIQwcr2Qcth5QWY/view?usp=drive_link", 
+            url_sitio: "https://drive.google.com/file/d/14MYppGS2IsGoseOChkIQwcr2Qcth5QWY/view?usp=drive_link",
+            titulo: "Pajaro Campana",
+            integrantes: "Tatiana Ocampo"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1VLjJ0O5TAVfCu7K8qRk1rZTlciGvHoEg/view?usp=sharing", 
+            url_sitio: "https://drive.google.com/file/d/1VLjJ0O5TAVfCu7K8qRk1rZTlciGvHoEg/view?usp=sharing",
+            titulo: "Che Pyhare Mombyry",
+            integrantes: "Mathias Quintana"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1buM5uYhLDzHNL7qFCGjBQ4jq1s8dUBya/view?usp=sharing", 
+            url_sitio: "https://drive.google.com/file/d/1buM5uYhLDzHNL7qFCGjBQ4jq1s8dUBya/view?usp=sharing",
+            titulo: "Che la reina",
+            integrantes: "Luana Martínez"
         },
         {
             categoria: "musica",
