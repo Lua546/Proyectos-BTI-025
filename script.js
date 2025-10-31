@@ -25,13 +25,13 @@ const projectsData = {
             integrantes: "Isana Gómez, Lucas Giménez y Mathias Quintana"
         },
         {
-            imagen: "https://www.youtube.com/watch?v=HITDs_5VGkw",
-            url_sitio: "https://www.youtube.com/watch?v=HITDs_5VGkw", 
+            imagen: "https://www.youtube.com/watch?v=qMmWllPCy-w",
+            url_sitio: "https://charlies092.github.io/game/", 
             titulo: "C.R.E.C.E: PEAK CV",
             integrantes: "Magalí Ramírez, Elias Armoa y Charlies Vera"
         },
         {
-            url_sitio: "https://mariajosegomezespinoza44-max.github.io/mercaexpres/",
+            url_sitio: "https://mercexp.itch.io/mercexp",
             imagen: "https://drive.google.com/file/d/1CQqgoKQoY4qlqSg5cImQZeBgvO4cqLjw/view?usp=drive_link", 
             titulo: "Mercado Express", 
             integrantes: "María Gómez, Ivan Alderete y Nayeli Silvero"
@@ -308,6 +308,20 @@ const projectsData = {
             url_sitio: "https://drive.google.com/file/d/1LB5BtPt6P4TGtihERVNO6lhs_VyyqY6a/view?usp=drive_link",
             titulo: "Rol de la Mujer Paraguaya en la Guerra Guazú",
             integrantes: "Ivan Alderete"
+        },
+        {
+            categoria: "historia",
+            imagen: "https://drive.google.com/file/d/1TfSKJMkmGbQbLQkOy08-UsLigZWO84ly/view?usp=sharing",
+            url_sitio: "https://drive.google.com/file/d/1TfSKJMkmGbQbLQkOy08-UsLigZWO84ly/view?usp=sharing",
+            titulo: "Batalla de Boquerón",
+            integrantes: "Elias Armoa"
+        },
+        {
+            categoria: "historia",
+            imagen: "https://drive.google.com/file/d/12C0q6qUxWhDFoXQprCXJDEgNW8SSdp0M/view?usp=sharing",
+            url_sitio: "https://drive.google.com/file/d/12C0q6qUxWhDFoXQprCXJDEgNW8SSdp0M/view?usp=sharing",
+            titulo: "Batalla de Curupayty",
+            integrantes: "Fabio López"
         },
         {
             categoria: "historia",
