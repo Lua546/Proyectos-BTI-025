@@ -813,6 +813,7 @@ function displayProjects(category) {
                     <h3 class="admin-info-title">Acceso administrador</h3>
                     <p class="admin-info-text">Para acceder como admin usar los siguientes datos:</p>
                     <ul class="admin-cred-list">
+                        <li><strong>Usuario:</strong> admin</li>
                         <li><strong>Correo:</strong> admin@gmail.com</li>
                         <li><strong>Contraseña:</strong> admin1234</li>
                     </ul>
