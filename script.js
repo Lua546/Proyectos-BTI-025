@@ -31,11 +31,6 @@ const projectsData = {
             integrantes: "Magalí Ramírez, Elias Armoa y Charlies Vera"
         },
         {
-            imagen: "https://drive.google.com/file/d/12ADJpOrvrKx7Jff4mchzzd10opTvkU2R/view?usp=drive_link", 
-            titulo: "Desvelo", 
-            integrantes: "Aquiles Bobadilla, Yadira Rivas y Karina Benítez"
-        },
-        {
             url_sitio: "https://mariajosegomezespinoza44-max.github.io/mercaexpres/",
             imagen: "https://drive.google.com/file/d/1CQqgoKQoY4qlqSg5cImQZeBgvO4cqLjw/view?usp=drive_link", 
             titulo: "Mercado Express", 
