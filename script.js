@@ -31,7 +31,7 @@ const projectsData = {
             integrantes: "Magalí Ramírez, Elias Armoa y Charlies Vera"
         },
         {
-            url_sitio: "https://mercexp.itch.io/mercexp",
+            url_sitio: "https://mercexp.itch.io/mercexprss",
             imagen: "https://drive.google.com/file/d/1CQqgoKQoY4qlqSg5cImQZeBgvO4cqLjw/view?usp=drive_link", 
             titulo: "Mercado Express", 
             integrantes: "María Gómez, Ivan Alderete y Nayeli Silvero"
@@ -43,6 +43,7 @@ const projectsData = {
             integrantes: "Sharise Cabañas, Tatiana Ocampos y Fernando Bogado"
         },
         {
+            url_sitio: "https://gamejolt.com/games/play/1027462",
             imagen: "https://www.youtube.com/watch?v=iepKq4RnzVg", 
             titulo: "Camino a la Albirroja", 
             integrantes: "Julio Gómez, Lucas Portillo y Ayelen Vera"
