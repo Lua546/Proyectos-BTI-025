@@ -630,6 +630,13 @@ const projectsData = {
             url_sitio: "https://drive.google.com/file/d/1RZWFZQ_0WrxwpX0fiiV9NmOa5yO5DEYR/view?usp=sharing",
             titulo: "Anahí",
             integrantes: "Sharise Cabaña"
+        },
+        {
+            categoria: "musica",
+            imagen: "https://drive.google.com/file/d/1n5XpX4q5_1rkmlq8WqRrI9mTCAI3iKWr/view?usp=sharing", 
+            url_sitio: "https://drive.google.com/file/d/1n5XpX4q5_1rkmlq8WqRrI9mTCAI3iKWr/view?usp=sharing",
+            titulo: "Paraguaya Linda",
+            integrantes: "Karina Benítez"
         }
     ]
 };
