@@ -104,7 +104,7 @@ const projectsData = {
             integrantes: "Alexia Rodas, Fabio López y Denis Casco" 
         },
         {
-            imagen: "", 
+            imagen: "https://www.youtube.com/watch?v=S2YeZ8iv9Co", 
             titulo: "Saveplug",
             integrantes: "Ayelen Vera, Alejandro Chamorro y Mauricio Galeano" 
         },
