@@ -32,7 +32,7 @@ const projectsData = {
             integrantes: "Magalí Ramírez, Elias Armoa y Charlies Vera"
         },
         {
-            url_sitio: "https://mercexp.itch.io/mercexprss",
+            url_sitio: "https://mariajosegomezespinoza44-max.github.io/mercaexxpres/",
             imagen: "https://drive.google.com/file/d/1CQqgoKQoY4qlqSg5cImQZeBgvO4cqLjw/view?usp=drive_link", 
             titulo: "Mercado Express", 
             integrantes: "María Gómez, Ivan Alderete y Nayeli Silvero"
@@ -200,10 +200,14 @@ const projectsData = {
             integrantes: "Yadira Rivas"
         },
         {
-            imagen: "",
-            url_sitio: "",
-            titulo: "System Production",
-            integrantes: "Julio Gómez"
+            imagen: "imagenes/davborn store.png",
+            url_sitio: "https://walrus-app-z6gn3.ondigitalocean.app/",
+            titulo: "Davborn Store",
+            integrantes: "Julio Gómez",
+            adminInfo: {
+                email: "admin@docker.com",
+                password: "admin123"
+            }
         },
         {
             imagen: "imagenes/Cioccomanía.png",
@@ -762,6 +766,13 @@ function createProjectCard(project) {
             <div class="card-content">
                 <h3>${project.titulo}</h3>
                 <p>Integrantes: <strong>${project.integrantes}</strong></p>
+                ${project.adminInfo ? `
+                <div class="admin-credentials">
+                    <h4>Acceso Admin:</h4>
+                    <p><strong>Email:</strong> ${project.adminInfo.email}</p>
+                    <p><strong>Contraseña:</strong> ${project.adminInfo.password}</p>
+                </div>
+                ` : ''}
             </div>
         </div>
         ${wrapperEnd}
