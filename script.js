@@ -115,7 +115,7 @@ const projectsData = {
         },
         {
             url_sitio:"https://lucasgimenez23.github.io/Safe-kitchen_/",
-            imagen: "imagenes/safe.jpg", 
+            imagen: "https://www.youtube.com/watch?v=Y1jsQ0ZuZvM", 
             titulo: "Safe Kitchen",
             integrantes: "Mathias Quintana y Lucas Giménez" 
         },
@@ -183,7 +183,7 @@ const projectsData = {
         },
         {
             imagen: "imagenes/Línea de fuego.png",
-            url_sitio: "http://lineadefuego.yzz.me/",
+            url_sitio: "https://lineadefuego.yzz.me/",
             titulo: "Línea de fuego",
             integrantes: "Lucas Giménez"
         },
