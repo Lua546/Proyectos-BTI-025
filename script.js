@@ -109,7 +109,8 @@ const projectsData = {
             integrantes: "Ayelen Vera, Alejandro Chamorro y Mauricio Galeano" 
         },
         {
-            imagen: "", 
+            imagen: "https://www.youtube.com/watch?v=vkoKAWPP-ss", 
+            url_sitio: "https://datateam-py.netlify.app/",
             titulo: "RaspBot",
             integrantes: "Julio Gómez, Lucas Portillo y Lucas Brítez" 
         },
@@ -203,11 +204,7 @@ const projectsData = {
             imagen: "imagenes/davborn store.png",
             url_sitio: "https://walrus-app-z6gn3.ondigitalocean.app/",
             titulo: "Davborn Store",
-            integrantes: "Julio Gómez",
-            adminInfo: {
-                email: "admin@docker.com",
-                password: "admin123"
-            }
+            integrantes: "Julio Gómez"
         },
         {
             imagen: "imagenes/Cioccomanía.png",
@@ -766,13 +763,6 @@ function createProjectCard(project) {
             <div class="card-content">
                 <h3>${project.titulo}</h3>
                 <p>Integrantes: <strong>${project.integrantes}</strong></p>
-                ${project.adminInfo ? `
-                <div class="admin-credentials">
-                    <h4>Acceso Admin:</h4>
-                    <p><strong>Email:</strong> ${project.adminInfo.email}</p>
-                    <p><strong>Contraseña:</strong> ${project.adminInfo.password}</p>
-                </div>
-                ` : ''}
             </div>
         </div>
         ${wrapperEnd}
