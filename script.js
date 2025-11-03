@@ -56,7 +56,8 @@ const projectsData = {
             integrantes: "Yadira Rivas, Aquiles Bobadilla y Karina Benítez"
         },
         {
-            imagen: "", 
+            url_sitio:"https://niss0024.github.io/Solo-en-Casa/",
+            imagen: "https://youtu.be/ywlcPMoFeCU?feature=shared", 
             titulo: "Solo en Casa", 
             integrantes: "Alexia Rodas, Fabio López y Denis Casco"
         }
@@ -88,7 +89,7 @@ const projectsData = {
         },
         {
             url_sitio: "https://mach1nemags-lang.github.io/BINOVA/",
-            imagen: "https://drive.google.com/file/d/11Gnkd2rICqbUZOoE-wbPxJsAoox8tUPj/view?usp=drive_link", 
+            imagen: "https://youtu.be/NRerezva2pA?si=IPt7WkEWT42TsdRL", 
             titulo: "Binova",
             integrantes: "Magalí Ramirez, Yanina Miranda y Tatiana Ocampos" 
         },
